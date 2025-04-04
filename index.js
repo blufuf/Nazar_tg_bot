@@ -3092,6 +3092,17 @@ const getBackButtonData = (quizType) => {
     return `back_to_${prefix}`;
 };
 
+const showImages = {
+    main: 'https://imgur.com/a/popcorn-IpzJ1zR', // Общая картинка для главного меню
+    btn1: 'https://imgur.com/a/RNiVj5h', // The Big Bang Theory
+    btn2: 'https://imgur.com/xQMlmA9', // The Simpsons
+    btn3: 'https://imgur.com/a/BYELSLe', // 13 Reasons Why
+    btn4: 'https://imgur.com/6rHCaG1', // Friends
+    btn5: 'https://imgur.com/a/Sy1WfRy', // Sherlock
+    btn6: 'https://imgur.com/WRx2fJg'  // Marvel
+};
+
+
 bot.setMyCommands([
     { command: '/start', description: '🏠 Главное меню' },
     { command: '/support', description: '🆘 Поддержка' },
@@ -3118,8 +3129,10 @@ const showMainMenu = (chatId) => {
         '❓ If you want to receive additional instructions you can use:\n' +
         '/instructions\n\n'+
         'Now choose TV production:';
-
-    bot.sendMessage(chatId, messageText, {reply_markup: inlineKeyboard});
+    bot.sendPhoto(chatId, showImages.main, {
+        caption: messageText,
+        reply_markup: inlineKeyboard
+    });
 };
 
 
@@ -3443,12 +3456,18 @@ const ShowBtn1Menu = (chatId, messageId) => {
             [{text:"Назад", callback_data: "back_to_main"}],
         ]
     };
-    bot.editMessageText('Choose the task', {
-        chat_id: chatId,
-        message_id: messageId,
+
+    if (messageId) {
+        bot.deleteMessage(chatId, messageId).catch(console.error);
+    }
+
+    // Отправляем новое сообщение с фото
+    bot.sendPhoto(chatId, showImages.btn1, {
+        caption: 'Choose the task for The Big Bang Theory',
         reply_markup: inlineKeyboard
     });
 };
+
 const ShowBtn2Menu = (chatId, messageId) => {
     const inlineKeyboard = {
         inline_keyboard: [
@@ -3460,14 +3479,17 @@ const ShowBtn2Menu = (chatId, messageId) => {
             [{text:"Определи где лексико-стилистический приём", callback_data:"sub_btn2_6"}],
             [{text:"Назад", callback_data: "back_to_main"}],
         ]
-
     };
-    bot.editMessageText('Choose the task',{
-            chat_id: chatId,
-            message_id: messageId,
-            reply_markup: inlineKeyboard
+
+    if (messageId) {
+        bot.deleteMessage(chatId, messageId).catch(console.error);
+    }
+    bot.sendPhoto(chatId, showImages.btn2, {
+        caption: 'Choose the task for The Simpsons',
+        reply_markup: inlineKeyboard
     });
 };
+
 const ShowBtn3Menu = (chatId, messageId) => {
     const inlineKeyboard = {
         inline_keyboard: [
@@ -3479,14 +3501,17 @@ const ShowBtn3Menu = (chatId, messageId) => {
             [{text:"Определи где лексико-стилистический приём", callback_data:"sub_btn3_6"}],
             [{text:"Назад", callback_data: "back_to_main"}],
         ]
-
     };
-    bot.editMessageText('Choose the task',{
-            chat_id: chatId,
-            message_id: messageId,
-            reply_markup: inlineKeyboard
+
+    if (messageId) {
+        bot.deleteMessage(chatId, messageId).catch(console.error);
+    }
+    bot.sendPhoto(chatId, showImages.btn3, {
+        caption: 'Choose the task for 13 Reasons Why',
+        reply_markup: inlineKeyboard
     });
 };
+
 const ShowBtn4Menu = (chatId, messageId) => {
     const inlineKeyboard = {
         inline_keyboard: [
@@ -3498,14 +3523,17 @@ const ShowBtn4Menu = (chatId, messageId) => {
             [{text:"Определи где лексико-стилистический приём", callback_data:"sub_btn4_6"}],
             [{text:"Назад", callback_data: "back_to_main"}],
         ]
-
     };
-    bot.editMessageText('Choose the task',{
-            chat_id: chatId,
-            message_id: messageId,
-            reply_markup: inlineKeyboard
+
+    if (messageId) {
+        bot.deleteMessage(chatId, messageId).catch(console.error);
+    }
+    bot.sendPhoto(chatId, showImages.btn4, {
+        caption: 'Choose the task for Friends',
+        reply_markup: inlineKeyboard
     });
 };
+
 const ShowBtn5Menu = (chatId, messageId) => {
     const inlineKeyboard = {
         inline_keyboard: [
@@ -3517,14 +3545,17 @@ const ShowBtn5Menu = (chatId, messageId) => {
             [{text:"Определи где лексико-стилистический приём", callback_data:"sub_btn5_6"}],
             [{text:"Назад", callback_data: "back_to_main"}],
         ]
-
     };
-    bot.editMessageText('Choose the task',{
-            chat_id: chatId,
-            message_id: messageId,
-            reply_markup: inlineKeyboard
+
+    if (messageId) {
+        bot.deleteMessage(chatId, messageId).catch(console.error);
+    }
+    bot.sendPhoto(chatId, showImages.btn5, {
+        caption: 'Choose the task for Sherlock',
+        reply_markup: inlineKeyboard
     });
 };
+
 const ShowBtn6Menu = (chatId, messageId) => {
     const inlineKeyboard = {
         inline_keyboard: [
@@ -3536,12 +3567,14 @@ const ShowBtn6Menu = (chatId, messageId) => {
             [{text:"Определи где лексико-стилистический приём", callback_data:"sub_btn6_6"}],
             [{text:"Назад", callback_data: "back_to_main"}],
         ]
-
     };
-    bot.editMessageText('Choose the task',{
-            chat_id: chatId,
-            message_id: messageId,
-            reply_markup: inlineKeyboard
+
+    if (messageId) {
+        bot.deleteMessage(chatId, messageId).catch(console.error);
+    }
+    bot.sendPhoto(chatId, showImages.btn6, {
+        caption: 'Choose the task for Marvel Cinematic Universe Films',
+        reply_markup: inlineKeyboard
     });
 };
 
@@ -3592,9 +3625,12 @@ bot.on('callback_query', (query) => {
     }
 
     if (data.startsWith('sub_')) {
-        showTaskDescription(chatId, data, messageId);
+        // Для заданий сначала удаляем текущее сообщение с меню
+        bot.deleteMessage(chatId, messageId).catch(console.error);
+        showTaskDescription(chatId, data);
         return;
     }
+
 
     if (data.startsWith('start_')) {
         const quizType = data.replace('start_', '');
