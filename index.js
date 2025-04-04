@@ -3116,7 +3116,8 @@ const showMainMenu = (chatId) => {
         '❓ If you have any problems, you can contact support:\n' +
         ' /support\n\n' +
         '❓ If you want to receive additional instructions you can use:\n' +
-        '/instructions\n\n';
+        '/instructions\n\n'+
+        'Now choose TV production:';
 
     bot.sendMessage(chatId, messageText, {reply_markup: inlineKeyboard});
 };
