@@ -2979,10 +2979,124 @@ const questions = {
     ],
 
 };
-
 const userStates = {};
+const taskDescriptions = {
+    // The Big Bang Theory
+    sub_btn1_1: "📝 Заполни пропуск\n\n" +
+        "Choose between three options and fill the correct the Lexico-Stylistic Element’s translation in the gap. The the Lexico-Stylistic Element in the sentences are underlined. The type of Lexico-Stylistic Element is given in brackets.",
+    sub_btn1_2: "📝 Определи переводческую трансформацию\n\n" +
+        "Choose between three options and identify what Translation Transformation was applied when translating the Lexico-Stylistic Element from English to Russian. The the Lexico-Stylistic Element in the sentences are underlined.",
+    sub_btn1_3: "📝 Определи лексико-стилистический прием\n\n" +
+        "Choose between three options and identify which Lexico-Stylistic Element is used in the English sentence and its translation. The the Lexico-Stylistic Element in the sentences are underlined.",
+    sub_btn1_4: "📝 Соедини предложения\n\n" +
+        "Link the sentences from the right column with Lexico-Stylistic Element which is used in it. The Lexico-Stylistic Element in the sentences are underlined.",
+    sub_btn1_5: "📝 Правда или ложь\n\n" +
+        "Identify whether the statement about the Translation Transformation that was applied to translate the Lexico-Stylistic Element in the sentence from English to Russian is True or False. The Lexico-Stylistic Element in the sentences are underlined.",
+    sub_btn1_6: "📝 Определи где лексико-стилистический приём\n\n" +
+        "Choose between two options and identify which of the two proposed translation options of Lexico-Stylistic Element from English to Russian uses the Translation Transformation (Concretization and Generalization). The type of Translation Transformation is given in brackets.",
 
+    // The Simpsons
+    sub_btn2_1: "📝 Заполни пропуск\n\n" +
+        "Choose between three options and fill the correct the Lexico-Stylistic Element’s translation in the gap. The the Lexico-Stylistic Element in the sentences are underlined. The type of Lexico-Stylistic Element is given in brackets.",
+    sub_btn2_2: "📝 Определи переводческую трансформацию\n\n" +
+        "Choose between three options and identify what Translation Transformation was applied when translating the Lexico-Stylistic Element from English to Russian. The the Lexico-Stylistic Element in the sentences are underlined.",
+    sub_btn2_3: "📝 Определи лексико-стилистический прием\n\n" +
+        "Choose between three options and identify which Lexico-Stylistic Element is used in the English sentence and its translation. The the Lexico-Stylistic Element in the sentences are underlined.",
+    sub_btn2_4: "📝 Соедини предложения\n\n" +
+        "Link the sentences from the right column with Lexico-Stylistic Element which is used in it. The Lexico-Stylistic Element in the sentences are underlined.",
+    sub_btn2_5: "📝 Правда или ложь\n\n" +
+        "Identify whether the statement about the Translation Transformation that was applied to translate the Lexico-Stylistic Element in the sentence from English to Russian is True or False. The Lexico-Stylistic Element in the sentences are underlined.",
+    sub_btn2_6: "📝 Определи где лексико-стилистический приём\n\n" +
+        "Choose between two options and identify which of the two proposed translation options of Lexico-Stylistic Element from English to Russian uses the Translation Transformation (Concretization and Generalization). The type of Translation Transformation is given in brackets.",
 
+    // 13 Reasons Why
+    sub_btn3_1: "📝 Заполни пропуск\n\n" +
+        "Choose between three options and fill the correct the Lexico-Stylistic Element’s translation in the gap. The the Lexico-Stylistic Element in the sentences are underlined. The type of Lexico-Stylistic Element is given in brackets.",
+    sub_btn3_2: "📝 Определи переводческую трансформацию\n\n" +
+        "Choose between three options and identify what Translation Transformation was applied when translating the Lexico-Stylistic Element from English to Russian. The the Lexico-Stylistic Element in the sentences are underlined.",
+    sub_btn3_3: "📝 Определи лексико-стилистический прием\n\n" +
+        "Choose between three options and identify which Lexico-Stylistic Element is used in the English sentence and its translation. The the Lexico-Stylistic Element in the sentences are underlined.",
+    sub_btn3_4: "📝 Соедини предложения\n\n" +
+        "Link the sentences from the right column with Lexico-Stylistic Element which is used in it. The Lexico-Stylistic Element in the sentences are underlined.",
+    sub_btn3_5: "📝 Правда или ложь\n\n" +
+        "Identify whether the statement about the Translation Transformation that was applied to translate the Lexico-Stylistic Element in the sentence from English to Russian is True or False. The Lexico-Stylistic Element in the sentences are underlined.",
+    sub_btn3_6: "📝 Определи где лексико-стилистический приём\n\n" +
+        "Choose between two options and identify which of the two proposed translation options of Lexico-Stylistic Element from English to Russian uses the Translation Transformation (Concretization and Generalization). The type of Translation Transformation is given in brackets.",
+
+    // Friends
+    sub_btn4_1: "📝 Заполни пропуск\n\n" +
+        "Choose between three options and fill the correct the Lexico-Stylistic Element’s translation in the gap. The the Lexico-Stylistic Element in the sentences are underlined. The type of Lexico-Stylistic Element is given in brackets.",
+    sub_btn4_2: "📝 Определи переводческую трансформацию\n\n" +
+        "Choose between three options and identify what Translation Transformation was applied when translating the Lexico-Stylistic Element from English to Russian. The the Lexico-Stylistic Element in the sentences are underlined.",
+    sub_btn4_3: "📝 Определи лексико-стилистический прием\n\n" +
+        "Choose between three options and identify which Lexico-Stylistic Element is used in the English sentence and its translation. The the Lexico-Stylistic Element in the sentences are underlined.",
+    sub_btn4_4: "📝 Соедини предложения\n\n" +
+        "Link the sentences from the right column with Lexico-Stylistic Element which is used in it. The Lexico-Stylistic Element in the sentences are underlined.",
+    sub_btn4_5: "📝 Правда или ложь\n\n" +
+        "Identify whether the statement about the Translation Transformation that was applied to translate the Lexico-Stylistic Element in the sentence from English to Russian is True or False. The Lexico-Stylistic Element in the sentences are underlined.",
+    sub_btn4_6: "📝 Определи где лексико-стилистический приём\n\n" +
+        "Choose between two options and identify which of the two proposed translation options of Lexico-Stylistic Element from English to Russian uses the Translation Transformation (Concretization and Generalization). The type of Translation Transformation is given in brackets.",
+
+    // Sherlock
+    sub_btn5_1: "📝 Заполни пропуск\n\n" +
+        "Choose between three options and fill the correct the Lexico-Stylistic Element’s translation in the gap. The the Lexico-Stylistic Element in the sentences are underlined. The type of Lexico-Stylistic Element is given in brackets.",
+    sub_btn5_2: "📝 Определи переводческую трансформацию\n\n" +
+        "Choose between three options and identify what Translation Transformation was applied when translating the Lexico-Stylistic Element from English to Russian. The the Lexico-Stylistic Element in the sentences are underlined.",
+    sub_btn5_3: "📝 Определи лексико-стилистический прием\n\n" +
+        "Choose between three options and identify which Lexico-Stylistic Element is used in the English sentence and its translation. The the Lexico-Stylistic Element in the sentences are underlined.",
+    sub_btn5_4: "📝 Соедини предложения\n\n" +
+        "Link the sentences from the right column with Lexico-Stylistic Element which is used in it. The Lexico-Stylistic Element in the sentences are underlined.",
+    sub_btn5_5: "📝 Правда или ложь\n\n" +
+        "Identify whether the statement about the Translation Transformation that was applied to translate the Lexico-Stylistic Element in the sentence from English to Russian is True or False. The Lexico-Stylistic Element in the sentences are underlined.",
+    sub_btn5_6: "📝 Определи где лексико-стилистический приём\n\n" +
+        "Choose between two options and identify which of the two proposed translation options of Lexico-Stylistic Element from English to Russian uses the Translation Transformation (Concretization and Generalization). The type of Translation Transformation is given in brackets.",
+
+    // Marvel Cinematic Universe Films
+    sub_btn6_1: "📝 Заполни пропуск\n\n" +
+        "Choose between three options and fill the correct the Lexico-Stylistic Element’s translation in the gap. The the Lexico-Stylistic Element in the sentences are underlined. The type of Lexico-Stylistic Element is given in brackets.",
+    sub_btn6_2: "📝 Определи переводческую трансформацию\n\n" +
+        "Choose between three options and identify what Translation Transformation was applied when translating the Lexico-Stylistic Element from English to Russian. The the Lexico-Stylistic Element in the sentences are underlined.",
+    sub_btn6_3: "📝 Определи лексико-стилистический прием\n\n" +
+        "Choose between three options and identify which Lexico-Stylistic Element is used in the English sentence and its translation. The the Lexico-Stylistic Element in the sentences are underlined.",
+    sub_btn6_4: "📝 Соедини предложения\n\n" +
+        "Link the sentences from the right column with Lexico-Stylistic Element which is used in it. The Lexico-Stylistic Element in the sentences are underlined.",
+    sub_btn6_5: "📝 Правда или ложь\n\n" +
+        "Identify whether the statement about the Translation Transformation that was applied to translate the Lexico-Stylistic Element in the sentence from English to Russian is True or False. The Lexico-Stylistic Element in the sentences are underlined.",
+    sub_btn6_6: "📝 Определи где лексико-стилистический приём\n\n" +
+        "Choose between two options and identify which of the two proposed translation options of Lexico-Stylistic Element from English to Russian uses the Translation Transformation (Concretization and Generalization). The type of Translation Transformation is given in brackets."
+};
+
+const showTaskDescription = (chatId, quizType, messageId = null) => {
+    const description = taskDescriptions[quizType];
+    const keyboard = {
+        inline_keyboard: [
+            [{ text: "Начать тест", callback_data: `start_${quizType}` }],
+            [{ text: "Назад", callback_data: getBackButtonData(quizType) }]
+        ]
+    };
+
+    if (messageId) {
+        bot.editMessageText(description, {
+            chat_id: chatId,
+            message_id: messageId,
+            reply_markup: keyboard
+        });
+    } else {
+        bot.sendMessage(chatId, description, { reply_markup: keyboard });
+    }
+};
+
+const getBackButtonData = (quizType) => {
+    // Определяем, к какому главному меню нужно вернуться
+    const prefix = quizType.split('_')[1]; // Получаем 'btn1', 'btn2' и т.д.
+    return `back_to_${prefix}`;
+};
+
+bot.setMyCommands([
+    { command: '/start', description: '🏠 Главное меню' },
+    { command: '/support', description: '🆘 Поддержка' },
+    { command: '/instructions', description: '📚 Инструкции' }
+]);
 const showMainMenu = (chatId) => {
     const inlineKeyboard = {
         inline_keyboard: [
@@ -2993,43 +3107,141 @@ const showMainMenu = (chatId) => {
             [{text:"Sherlock", callback_data:"btn5"}],
             [{text:"Marvel Cinematic Universe Films", callback_data:"btn6"}],
         ]
-
     };
     const messageText = '🔥How do I work?🔥\n\n' +
         '1️⃣ Choose your TV product 🧐\n\n' +
         '2️⃣ Get your question about lexico-stylistic adaptation 😝\n\n' +
         '3️⃣ Answer your questions 🤩\n\n' +
-        '4️⃣ Get the results 🥸';
-
-
-    //Меню и активные кнопки инструкции и команд (хотя надо ли команды проще сделать кнопку меню возле чата, потому
-    // что команд не много)
-
+        '4️⃣ Get the results 🥸\n\n\n' +
+        '❓ If you have any problems, you can contact support:\n' +
+        ' /support\n\n' +
+        '❓ If you want to receive additional instructions you can use:\n' +
+        '/instructions\n\n';
 
     bot.sendMessage(chatId, messageText, {reply_markup: inlineKeyboard});
 };
 
-const ShowBtn1Menu = (chatId, messageId) => {
-    const inlineKeyboard = {
-        inline_keyboard: [
-            [{text:"Заполни пропуск", callback_data:"sub_btn1_1"}],
-            [{text:"Определи переводческую трансформацию", callback_data:"sub_btn1_2"}],
-            [{text:"Определи лексико-стилистический прием", callback_data:"sub_btn1_3"}],
-            [{text:"Соедини предложения", callback_data:"sub_btn1_4"}],
-            [{text:"Правда или ложь", callback_data:"sub_btn1_5"}],
-            [{text:"Определи где лексико-стилистический приём", callback_data:"sub_btn1_6"}],
-            [{text:"Назад", callback_data: "back_to_main"}],
-        ]
 
-    };
-    bot.editMessageText('Выбери задание',{
-        chat_id: chatId,
-        message_id: messageId,
-        reply_markup: inlineKeyboard
+
+bot.onText(/\/instructions/, (msg) => {
+    const chatId = msg.chat.id;
+    bot.sendMessage(chatId, "📚 Instructions 📚\n\n" +
+        "1. Choose a TV show from the main menu\n" +
+        "2. Select a quiz type (fill in the gap, identify transformations, etc.)\n" +
+        "3. Read each question carefully and select your answer\n" +
+        "4. Complete all questions to see your results\n" +
+        "5. You can cancel any quiz and return to the main menu\n\n" +
+        "Tip: Some quizzes have time limits, so answer promptly!");
+});
+
+
+const feedbackStates = {};
+const SUPPORT_CHAT_ID = -1002679349292; // Замените на реальный ID вашей группы поддержки
+
+// Обработчик команды /feedback
+bot.onText(/\/feedback/, (msg) => {
+    const chatId = msg.chat.id;
+    feedbackStates[chatId] = { waitingForFeedback: true };
+
+    bot.sendMessage(chatId, "✍️ Пожалуйста, напишите ваш отзыв или жалобу. Мы постараемся ответить как можно скорее.\n\n" +
+        "Чтобы отменить отправку, используйте команду /cancel", {
+        reply_markup: {
+            keyboard: [[{ text: "❌ Отменить отправку" }]],
+            resize_keyboard: true,
+            one_time_keyboard: true
+        }
+    });
+});
+
+// Обработчик команды отмены
+bot.onText(/\/cancel/, (msg) => {
+    const chatId = msg.chat.id;
+    if (feedbackStates[chatId]) {
+        delete feedbackStates[chatId];
+        bot.sendMessage(chatId, "❌ Отправка отменена", {
+            reply_markup: { remove_keyboard: true }
+        });
+        showMainMenu(chatId);
+    }
+});
+
+bot.on('message', (msg) => {
+    const chatId = msg.chat.id;
+    const text = msg.text;
+
+    if (feedbackStates[chatId] && feedbackStates[chatId].waitingForFeedback && text !== "❌ Отменить отправку") {
+        // Формируем информативное сообщение для поддержки
+        const userInfo = `👤 Пользователь: ${msg.from.first_name} ${msg.from.last_name || ''} 
+        (@${msg.from.username || 'нет username'}) 
+        ID: ${msg.from.id}`;
+
+        const supportMessage = `✉️ НОВОЕ ОБРАЩЕНИЕ\n\n${userInfo}\n\n📄 Сообщение:\n${text}`;
+
+        try {
+            // Отправляем в группу поддержки
+            bot.sendMessage(SUPPORT_CHAT_ID, supportMessage, {
+                reply_markup: {
+                    inline_keyboard: [[
+                        {
+                            text: "Ответить пользователю",
+                            url: `tg://user?id=${msg.from.id}`
+                        }
+                    ]]
+                }
+            });
+
+            // Подтверждение пользователю
+            const ticketId = 'TKT-' + Math.random().toString(36).substr(2, 6).toUpperCase();
+            bot.sendMessage(chatId, `✅ Ваше сообщение отправлено в поддержку!\n\nНомер обращения: ${ticketId}\nМы ответим вам в ближайшее время.`, {
+                reply_markup: { remove_keyboard: true }
+            });
+
+        } catch (error) {
+            console.error('Ошибка отправки в поддержку:', error);
+            bot.sendMessage(chatId, "❌ Произошла ошибка при отправке сообщения. Пожалуйста, попробуйте позже.");
         }
 
-    )
-};
+        delete feedbackStates[chatId];
+        showMainMenu(chatId);
+    }
+
+    if (text === "❌ Отменить отправку") {
+        delete feedbackStates[chatId];
+        bot.sendMessage(chatId, "❌ Отправка отменена", {
+            reply_markup: { remove_keyboard: true }
+        });
+        showMainMenu(chatId);
+    }
+});
+
+// Обновленный обработчик /support
+bot.onText(/\/support/, (msg) => {
+    const chatId = msg.chat.id;
+    bot.sendMessage(chatId, "🛟 Support Information 🛟\n\n" +
+        "Если у вас возникли проблемы:\n\n" +
+        "1. Нажмите кнопку ниже, чтобы написать сообщение в поддержку\n", {
+        reply_markup: {
+            inline_keyboard: [
+                [{ text: "✍️ Написать в поддержку", callback_data: "send_feedback" }]
+            ]
+        }
+    });
+});
+
+// Обработчик inline кнопки
+bot.on('callback_query', (query) => {
+    if (query.data === 'send_feedback') {
+        bot.answerCallbackQuery(query.id);
+        feedbackStates[query.message.chat.id] = { waitingForFeedback: true };
+        bot.sendMessage(query.message.chat.id, "✍️ Пожалуйста, напишите ваш вопрос или проблему. Мы ответим как можно скорее.\n\n" +
+            "Для отмены используйте /cancel или кнопку ниже.", {
+            reply_markup: {
+                keyboard: [[{ text: "❌ Отменить отправку" }]],
+                resize_keyboard: true
+            }
+        });
+    }
+});
 
 const startQuiz = (chatId, quizType) => {
     if (quizType === 'sub_btn1_4' || quizType === 'sub_btn2_4' || quizType === 'sub_btn3_4' || quizType === 'sub_btn4_4' || quizType === 'sub_btn5_4' || quizType === 'sub_btn6_4') {
@@ -3218,6 +3430,24 @@ const showResults = (chatId) => {
 };
 
 
+const ShowBtn1Menu = (chatId, messageId) => {
+    const inlineKeyboard = {
+        inline_keyboard: [
+            [{text:"Заполни пропуск", callback_data:"sub_btn1_1"}],
+            [{text:"Определи переводческую трансформацию", callback_data:"sub_btn1_2"}],
+            [{text:"Определи лексико-стилистический прием", callback_data:"sub_btn1_3"}],
+            [{text:"Соедини предложения", callback_data:"sub_btn1_4"}],
+            [{text:"Правда или ложь", callback_data:"sub_btn1_5"}],
+            [{text:"Определи где лексико-стилистический приём", callback_data:"sub_btn1_6"}],
+            [{text:"Назад", callback_data: "back_to_main"}],
+        ]
+    };
+    bot.editMessageText('Choose the task', {
+        chat_id: chatId,
+        message_id: messageId,
+        reply_markup: inlineKeyboard
+    });
+};
 const ShowBtn2Menu = (chatId, messageId) => {
     const inlineKeyboard = {
         inline_keyboard: [
@@ -3231,15 +3461,12 @@ const ShowBtn2Menu = (chatId, messageId) => {
         ]
 
     };
-    bot.editMessageText('Выбери задание',{
+    bot.editMessageText('Choose the task',{
             chat_id: chatId,
             message_id: messageId,
             reply_markup: inlineKeyboard
-        }
-
-    )
+    });
 };
-
 const ShowBtn3Menu = (chatId, messageId) => {
     const inlineKeyboard = {
         inline_keyboard: [
@@ -3253,15 +3480,12 @@ const ShowBtn3Menu = (chatId, messageId) => {
         ]
 
     };
-    bot.editMessageText('Выбери задание',{
+    bot.editMessageText('Choose the task',{
             chat_id: chatId,
             message_id: messageId,
             reply_markup: inlineKeyboard
-        }
-
-    )
+    });
 };
-
 const ShowBtn4Menu = (chatId, messageId) => {
     const inlineKeyboard = {
         inline_keyboard: [
@@ -3275,15 +3499,12 @@ const ShowBtn4Menu = (chatId, messageId) => {
         ]
 
     };
-    bot.editMessageText('Выбери задание',{
+    bot.editMessageText('Choose the task',{
             chat_id: chatId,
             message_id: messageId,
             reply_markup: inlineKeyboard
-        }
-
-    )
+    });
 };
-
 const ShowBtn5Menu = (chatId, messageId) => {
     const inlineKeyboard = {
         inline_keyboard: [
@@ -3292,20 +3513,17 @@ const ShowBtn5Menu = (chatId, messageId) => {
             [{text:"Определи лексико-стилистический прием", callback_data:"sub_btn5_3"}],
             [{text:"Соедини предложения", callback_data:"sub_btn5_4"}],
             [{text:"Правда или ложь", callback_data:"sub_btn5_5"}],
-            [{text:"Определи где лексико-стилистический приём", callback_data:"sub_btn6_6"}],
+            [{text:"Определи где лексико-стилистический приём", callback_data:"sub_btn5_6"}],
             [{text:"Назад", callback_data: "back_to_main"}],
         ]
 
     };
-    bot.editMessageText('Выбери задание',{
+    bot.editMessageText('Choose the task',{
             chat_id: chatId,
             message_id: messageId,
             reply_markup: inlineKeyboard
-        }
-
-    )
+    });
 };
-
 const ShowBtn6Menu = (chatId, messageId) => {
     const inlineKeyboard = {
         inline_keyboard: [
@@ -3319,14 +3537,13 @@ const ShowBtn6Menu = (chatId, messageId) => {
         ]
 
     };
-    bot.editMessageText('Выбери задание',{
+    bot.editMessageText('Choose the task',{
             chat_id: chatId,
             message_id: messageId,
             reply_markup: inlineKeyboard
-        }
-
-    )
+    });
 };
+
 
 bot.onText(/\/start/, (msg) => {
     showMainMenu(msg.chat.id);
@@ -3337,104 +3554,52 @@ bot.on('callback_query', (query) => {
     const messageId = query.message.message_id;
     const data = query.data;
 
-    switch (data) {
-        case 'btn1':
-            ShowBtn1Menu(chatId, messageId);
-            break;
-        case 'btn2':
-            ShowBtn2Menu(chatId, messageId);
-            break;
-        case 'btn3':
-            ShowBtn3Menu(chatId, messageId);
-            break;
-        case 'btn4':
-            ShowBtn4Menu(chatId, messageId);
-            break;
-        case 'btn5':
-            ShowBtn5Menu(chatId, messageId);
-            break;
-        case 'btn6':
-            ShowBtn6Menu(chatId, messageId);
-            break;
-        case 'back_to_main':
-            bot.deleteMessage(chatId, messageId).catch(() =>{});
-            showMainMenu(chatId)
-            break;
-    }
-    if (data === 'sub_btn1_1') {
-        startQuiz(chatId, 'sub_btn1_1');
-    }   else if (data === 'sub_btn1_2'){
-        startQuiz(chatId, 'sub_btn1_2')
-    }   else if (data === 'sub_btn1_3'){
-        startQuiz(chatId, 'sub_btn1_3')
-    }   else if (data === 'sub_btn1_4') {
-        startQuiz(chatId, 'sub_btn1_4');
-    }   else if (data === 'sub_btn1_5') {
-        startQuiz(chatId, 'sub_btn1_5');
-    }   else if (data === 'sub_btn1_6') {
-        startQuiz(chatId, 'sub_btn1_6');
-    }   else if (data === 'sub_btn2_1') {
-        startQuiz(chatId, 'sub_btn2_1');
-    }   else if (data === 'sub_btn2_2') {
-        startQuiz(chatId, 'sub_btn2_2');
-    }   else if (data === 'sub_btn2_3') {
-        startQuiz(chatId, 'sub_btn2_3');
-    }   else if (data === 'sub_btn2_4') {
-        startQuiz(chatId, 'sub_btn2_4');
-    }   else if (data === 'sub_btn2_5') {
-        startQuiz(chatId, 'sub_btn2_5');
-    }   else if (data === 'sub_btn2_6') {
-        startQuiz(chatId, 'sub_btn2_6');
-    }   else if (data === 'sub_btn3_1') {
-        startQuiz(chatId, 'sub_btn3_1');
-    }   else if (data === 'sub_btn3_2') {
-        startQuiz(chatId, 'sub_btn3_2');
-    }   else if (data === 'sub_btn3_3') {
-        startQuiz(chatId, 'sub_btn3_3');
-    }   else if (data === 'sub_btn3_4') {
-        startQuiz(chatId, 'sub_btn3_4');
-    }   else if (data === 'sub_btn3_5') {
-        startQuiz(chatId, 'sub_btn3_5');
-    }   else if (data === 'sub_btn3_6') {
-        startQuiz(chatId, 'sub_btn3_6');
-    }   else if (data === 'sub_btn4_1') {
-        startQuiz(chatId, 'sub_btn4_1');
-    }   else if (data === 'sub_btn4_2') {
-        startQuiz(chatId, 'sub_btn4_2');
-    }   else if (data === 'sub_btn4_3') {
-        startQuiz(chatId, 'sub_btn4_3');
-    }   else if (data === 'sub_btn4_4') {
-        startQuiz(chatId, 'sub_btn4_4');
-    }   else if (data === 'sub_btn4_5') {
-        startQuiz(chatId, 'sub_btn4_5');
-    }   else if (data === 'sub_btn4_6') {
-        startQuiz(chatId, 'sub_btn4_6');
-    }   else if (data === 'sub_btn5_1') {
-        startQuiz(chatId, 'sub_btn5_1');
-    }   else if (data === 'sub_btn5_2') {
-        startQuiz(chatId, 'sub_btn5_2');
-    }   else if (data === 'sub_btn5_3') {
-        startQuiz(chatId, 'sub_btn5_3');
-    }   else if (data === 'sub_btn5_4') {
-        startQuiz(chatId, 'sub_btn5_4');
-    }   else if (data === 'sub_btn5_5') {
-        startQuiz(chatId, 'sub_btn5_5');
-    }   else if (data === 'sub_btn5_6') {
-        startQuiz(chatId, 'sub_btn5_6');
-    }   else if (data === 'sub_btn6_1') {
-        startQuiz(chatId, 'sub_btn6_1');
-    }   else if (data === 'sub_btn6_2') {
-        startQuiz(chatId, 'sub_btn6_2');
-    }   else if (data === 'sub_btn6_3') {
-        startQuiz(chatId, 'sub_btn6_3');
-    }   else if (data === 'sub_btn6_4') {
-        startQuiz(chatId, 'sub_btn6_4');
-    }   else if (data === 'sub_btn6_5') {
-        startQuiz(chatId, 'sub_btn6_5');
-    }   else if (data === 'sub_btn6_6') {
-        startQuiz(chatId, 'sub_btn6_6');
+    // Обработка кнопок главного меню
+    if (data.startsWith('btn')) {
+        const btnNumber = data.replace('btn', '');
+        switch (btnNumber) {
+            case '1': ShowBtn1Menu(chatId, messageId); break;
+            case '2': ShowBtn2Menu(chatId, messageId); break;
+            case '3': ShowBtn3Menu(chatId, messageId); break;
+            case '4': ShowBtn4Menu(chatId, messageId); break;
+            case '5': ShowBtn5Menu(chatId, messageId); break;
+            case '6': ShowBtn6Menu(chatId, messageId); break;
+        }
+        return;
     }
 
+    if (data.startsWith('back_to_')) {
+        const target = data.replace('back_to_', '');
+        if (target === 'main') {
+            bot.deleteMessage(chatId, messageId).catch(() => {});
+            showMainMenu(chatId);
+        } else {
+            const showMenuFunc = {
+                'btn1': ShowBtn1Menu,
+                'btn2': ShowBtn2Menu,
+                'btn3': ShowBtn3Menu,
+                'btn4': ShowBtn4Menu,
+                'btn5': ShowBtn5Menu,
+                'btn6': ShowBtn6Menu
+            }[target];
+
+            if (showMenuFunc) {
+                showMenuFunc(chatId, messageId);
+            }
+        }
+        return;
+    }
+
+    if (data.startsWith('sub_')) {
+        showTaskDescription(chatId, data, messageId);
+        return;
+    }
+
+    if (data.startsWith('start_')) {
+        const quizType = data.replace('start_', '');
+        startQuiz(chatId, quizType);
+        return;
+    }
 
     if (data.startsWith('answer_')) {
         const answer = data.split('_')[1];
@@ -3443,7 +3608,6 @@ bot.on('callback_query', (query) => {
         const answer = data.split('_')[1];
         handleMatchingAnswer(chatId, answer, query.id);
     }
-
 
     if (data === 'cancel_quiz') {
         if (userStates[chatId]?.lastMessageId) {
